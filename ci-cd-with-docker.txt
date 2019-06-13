@@ -1,0 +1,3 @@
+Reference the following document:
+https://yeasy.gitbooks.io/docker_practice/cases/ci/drone.html
+
