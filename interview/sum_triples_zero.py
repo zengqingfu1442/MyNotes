@@ -42,4 +42,4 @@ def func(lst: list) -> list:
 if __name__ == '__main__':
     nums = [-2, -1, 0, 1, 3, -4]
     nums2 = [-11, -29, -67, -2, -3, -4, -1, 0, 1, 2, 3, 4, 5, 67, 23, 11, 28, 7, 10, 11]
-    func(nums2)
+    func(nums)
