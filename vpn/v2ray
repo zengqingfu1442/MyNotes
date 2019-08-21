@@ -1,0 +1,37 @@
+https://github.com/233boy/v2ray/issues/260
+
+使用这个脚本搭建的v2ray服务，请问有Ubuntu18.04上的客户端吗？
+
+
+
+ 
+   
+bososha commented 10 days ago 
+v2ray的特性之一就是不分客户端和服务端
+
+ 
+   
+Author 
+zengqingfu1442 commented 3 days ago 
+那么请问使用这个脚本安装完之后，在Ubuntu18.04下怎么使用v2ray浏览国外的网站呢？还需要额外的配置吗？
+
+
+ 
+   
+bososha commented 3 days ago 
+一般使用Linux的默认都是高级用户，在服务端可以偷懒用脚本，在Linux客户端上就得老老实实去写配置文件。
+233脚本帮你做的：
+[(入站，vmess(IP地址=a, 端口=b, uuid=c, ... )) -> (v2ray路由) -> (出站，freedom(直连)) ------> 外网(Google等)]
+这是vps上跑的v2ray
+你需要做的：
+本地程序(socks5(127.0.0.1:1080) -------> [(入站，socks5(127.0.0.1:1080) -> (v2ray路由) -> (出站，vmess(IP地址=a, 端口=b, uuid=c, ...))] --------> (连你的vps上的v2ray)
+这是Ubuntu上跑的v2ray
+所以说不分客户端服务端。
+PS. 你可以试试去找一些配置template，或者……直接去看文档。
+
+
+ 
+   
+Author 
+zengqingfu1442 commented 38 minutes ago 
+谢谢你的耐心回复，关注你了，交个朋友
